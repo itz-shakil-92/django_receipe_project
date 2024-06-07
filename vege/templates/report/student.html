@@ -3,21 +3,29 @@
 
 <div class="container mt-5" style="margin-bottom:50px">
     
-    <table class="table">
+    <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Student_id</th>
+            <th scope="col">Department</th>
+            <th scope="col">Student_name</th>
+            <th scope="col">Student_email</th>
+            <th scope="col">Student_age</th>
           </tr>
         </thead>
         <tbody>
+          {% for st in queryset%}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            
+            <th >{{forloop.counter}}</th>
+            <td>{{st.student_id}}</td>
+            <td>{{st.department}}</td>
+            <td>{{st.student_name}}</td>
+            <td>{{st.student_email}}</td>
+            <td>{{st.student_age}}</td>
           </tr>
+          {% endfor %}
+        </tbody>
       </table>
 {% endblock %}
