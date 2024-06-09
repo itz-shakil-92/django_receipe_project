@@ -28,7 +28,11 @@
           <tr>
             
             <th >{{forloop.counter}}</th>
-            <td>{{st.student_id}}</td>
+            <td>
+             <a href="{% url 'see_marks' st.student_id %}">
+              {{st.student_id}}
+            </a>
+          </td>
             <td>{{st.department}}</td>
             <td>{{st.student_name}}</td>
             <td>{{st.student_email}}</td>
